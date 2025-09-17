@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Real Estate Investment Platform</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="font-['Pacifico'] text-2xl text-primary">logo</div>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Properties</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Markets</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full min-h-screen bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20commercial%20real%20estate%20buildings%20with%20glass%20facades%20and%20steel%20structures%20against%20clear%20sky%20background%2C%20professional%20architectural%20photography%20with%20clean%20white%20and%20blue%20tones%2C%20left%20side%20has%20subtle%20gradient%20overlay%20for%20text%20readability%2C%20contemporary%20urban%20development&width=1920&height=1080&seq=hero001&orientation=landscape');">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
+        <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-screen">
+            <div class="w-full max-w-2xl">
+                <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                    Smart Real Estate for Durable Income & Long-Term Growth
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Invest in premium commercial properties with data-driven insights and professional management. Build wealth through strategic real estate investments.
+                </p>
+                <button class="bg-primary text-white px-8 py-4 text-lg !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap mb-12">
+                    Start Investing
+                </button>
+
+                <!-- Statistics -->
+                <div class="flex flex-wrap gap-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary">$2.4B</div>
+                        <div class="text-sm text-gray-600 mt-1">Assets Under Management</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary">12.8%</div>
+                        <div class="text-sm text-gray-600 mt-1">Average Annual Return</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary">500+</div>
+                        <div class="text-sm text-gray-600 mt-1">Properties Managed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Focus Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Focus</h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        We specialize in acquiring and managing high-quality commercial real estate across key metropolitan markets. Our portfolio includes office buildings, retail centers, industrial properties, and mixed-use developments that generate consistent income and
+                        long-term appreciation.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-4"></div>
+                            <span class="text-gray-700">Prime commercial properties in growth markets</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-4"></div>
+                            <span class="text-gray-700">Professional property management and optimization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-4"></div>
+                            <span class="text-gray-700">Data-driven investment strategies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%20and%20contemporary%20architecture%2C%20professional%20commercial%20real%20estate%20photography%20with%20clean%20blue%20sky%20background%2C%20high%20quality%20architectural%20details&width=400&height=300&seq=focus001&orientation=landscape"
+                        alt="Office Building" class="w-full h-48 object-cover object-top rounded-lg shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=upscale%20retail%20shopping%20center%20with%20modern%20design%20and%20landscaping%2C%20commercial%20real%20estate%20photography%20showing%20premium%20retail%20spaces%20with%20clean%20architectural%20lines&width=400&height=300&seq=focus002&orientation=landscape"
+                        alt="Retail Center" class="w-full h-48 object-cover object-top rounded-lg shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=industrial%20warehouse%20facility%20with%20modern%20logistics%20design%2C%20commercial%20real%20estate%20photography%20showing%20efficient%20industrial%20architecture%20with%20loading%20docks&width=400&height=300&seq=focus003&orientation=landscape"
+                        alt="Industrial Property" class="w-full h-48 object-cover object-top rounded-lg shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=mixed%20use%20development%20with%20residential%20and%20commercial%20spaces%2C%20modern%20urban%20architecture%20with%20glass%20and%20steel%20construction%2C%20professional%20real%20estate%20photography&width=400&height=300&seq=focus004&orientation=landscape"
+                        alt="Mixed Use Development" class="w-full h-48 object-cover object-top rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Understanding How It Works Efficiently</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our streamlined investment process makes it easy to start building wealth through commercial real estate
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                            1
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Create Your Account</h3>
+                            <p class="text-gray-600">Sign up and complete our investor qualification process. Provide your investment goals and risk preferences to get personalized recommendations.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                            2
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Browse Properties</h3>
+                            <p class="text-gray-600">Explore our curated selection of commercial properties. Review detailed financial projections, market analysis, and property information.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                            3
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Invest & Earn</h3>
+                            <p class="text-gray-600">Make your investment and start earning quarterly distributions. Track your portfolio performance through our investor dashboard.</p>
+                        </div>
+                    </div>
+
+                    <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
+                        Get Started Today
+                    </button>
+                </div>
+
+                <div class="relative">
+                    <img src="https://readdy.ai/api/search-image?query=beautiful%20commercial%20real%20estate%20property%20with%20landscaped%20grounds%20and%20modern%20architecture%2C%20professional%20photography%20showing%20investment%20quality%20commercial%20building%20with%20clear%20blue%20sky&width=600&height=500&seq=process001&orientation=landscape"
+                        alt="Investment Property" class="w-full h-96 object-cover object-top rounded-xl shadow-lg">
+                    <div class="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md">
+                        <div class="text-sm text-gray-600">ROI Projection</div>
+                        <div class="text-lg font-bold text-primary">14.2%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Analysis Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Analyze Emerging Market Opportunities</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Discover high-growth markets and property types that offer the best potential for long-term returns
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20office%20buildings%20in%20downtown%20business%20district%2C%20commercial%20real%20estate%20photography%20showing%20Class%20A%20office%20towers%20with%20glass%20facades%20and%20urban%20skyline&width=300&height=200&seq=market001&orientation=landscape"
+                        alt="Office Market" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Office Buildings</h3>
+                        <p class="text-gray-600 text-sm mb-4">Premium office spaces in central business districts with long-term corporate tenants.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">8.5%</span>
+                            <span class="text-sm text-gray-500">Avg. Cap Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=upscale%20retail%20shopping%20center%20with%20modern%20storefronts%20and%20outdoor%20dining%20areas%2C%20commercial%20real%20estate%20photography%20showing%20premium%20retail%20development&width=300&height=200&seq=market002&orientation=landscape"
+                        alt="Retail Market" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Retail Centers</h3>
+                        <p class="text-gray-600 text-sm mb-4">High-traffic retail locations with established anchor tenants and strong foot traffic.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">7.2%</span>
+                            <span class="text-sm text-gray-500">Avg. Cap Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20industrial%20warehouse%20and%20logistics%20facility%20with%20loading%20docks%20and%20distribution%20centers%2C%20commercial%20real%20estate%20photography%20showing%20efficient%20industrial%20architecture&width=300&height=200&seq=market003&orientation=landscape"
+                        alt="Industrial Market" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Industrial</h3>
+                        <p class="text-gray-600 text-sm mb-4">Warehouse and logistics facilities serving the growing e-commerce sector.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">9.1%</span>
+                            <span class="text-sm text-gray-500">Avg. Cap Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=luxury%20mixed%20use%20development%20with%20residential%20towers%20and%20ground%20floor%20retail%2C%20modern%20urban%20architecture%20with%20glass%20and%20steel%20construction&width=300&height=200&seq=market004&orientation=landscape"
+                        alt="Mixed Use Market" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Mixed Use</h3>
+                        <p class="text-gray-600 text-sm mb-4">Diversified properties combining residential, retail, and office components.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">6.8%</span>
+                            <span class="text-sm text-gray-500">Avg. Cap Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
+                    View All Markets
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Benefits Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8">Why Invest in Commercial Real Estate</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Stable Income Generation</h3>
+                                <p class="text-gray-300">Receive quarterly distributions from rental income with long-term lease agreements.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Portfolio Diversification</h3>
+                                <p class="text-gray-300">Reduce risk by adding real estate to your investment portfolio alongside stocks and bonds.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Inflation Hedge</h3>
+                                <p class="text-gray-300">Real estate values and rents typically increase with inflation, protecting your purchasing power.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Professional Management</h3>
+                                <p class="text-gray-300">Our experienced team handles all aspects of property management and optimization.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Tax Advantages</h3>
+                                <p class="text-gray-300">Benefit from depreciation deductions and other real estate tax incentives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Portfolio Performance</h3>
+                    <div id="performanceChart" class="w-full h-80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">The Wall Street Podcast</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Stay informed with weekly insights on commercial real estate markets, investment strategies, and economic trends that impact your portfolio.
+                    </p>
+
+                    <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Episode 127: Market Outlook 2025</h3>
+                                <p class="text-gray-600 text-sm">Commercial real estate trends and predictions</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <button class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                    <i class="ri-play-fill"></i>
+                                </button>
+                                <div class="text-sm text-gray-600">42:15</div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600">
+                                    <i class="ri-speed-line"></i>
+                                </button>
+                                <button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600">
+                                    <i class="ri-volume-up-line"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                            <div class="bg-primary h-2 rounded-full" style="width: 35%"></div>
+                        </div>
+                    </div>
+
+                    <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
+                        Listen & Subscribe
+                    </button>
+                </div>
+
+                <div class="relative">
+                    <img src="https://readdy.ai/api/search-image?query=professional%20podcast%20recording%20studio%20setup%20with%20microphones%20and%20headphones%2C%20modern%20audio%20equipment%20for%20business%20podcast%20production%20with%20clean%20minimalist%20design&width=600&height=500&seq=podcast001&orientation=landscape"
+                        alt="Podcast Studio" class="w-full h-96 object-cover object-top rounded-xl shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <div class="text-sm opacity-80">New Episode Every Tuesday</div>
+                        <div class="text-lg font-semibold">Real Estate Market Insights</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-['Pacifico'] text-2xl text-white mb-4">logo</div>
+                    <p class="text-gray-400 mb-6">
+                        Building wealth through strategic commercial real estate investments with professional management and data-driven insights.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-twitter-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Invest</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Browse Properties</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Investment Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Market Analysis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Smart Real Estate Platform. All rights reserved.
+                </p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="ri-visa-fill text-gray-400 text-xl"></i>
+                    </div>
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="ri-mastercard-fill text-gray-400 text-xl"></i>
+                    </div>
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="ri-paypal-fill text-gray-400 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="chart-performance">
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartDom = document.getElementById('performanceChart');
+            const myChart = echarts.init(chartDom);
+
+            const option = {
+                animation: false,
+                grid: {
+                    top: 20,
+                    right: 20,
+                    bottom: 40,
+                    left: 60
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        color: '#6b7280'
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#f3f4f6'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#6b7280',
+                        formatter: '{value}%'
+                    }
+                },
+                series: [{
+                    data: [8.2, 9.5, 11.3, 12.8, 14.1, 15.2],
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'none',
+                    lineStyle: {
+                        color: 'rgba(87, 181, 231, 1)',
+                        width: 3
+                    },
+                    areaStyle: {
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                    offset: 0,
+                                    color: 'rgba(87, 181, 231, 0.1)'
+                                },
+                                {
+                                    offset: 1,
+                                    color: 'rgba(87, 181, 231, 0.01)'
+                                }
+                            ]
+                        }
+                    }
+                }],
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    borderColor: '#e5e7eb',
+                    textStyle: {
+                        color: '#1f2937'
+                    },
+                    formatter: function(params) {
+                        return `${params[0].name}: ${params[0].value}% Annual Return`;
+                    }
+                }
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+
+</html>
